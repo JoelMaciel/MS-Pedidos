@@ -1,4 +1,4 @@
-package com.joel.pedidos.enums;
+package com.joel.pedidos.domain.enums;
 
 public enum Status {
 
