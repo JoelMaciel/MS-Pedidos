@@ -1,5 +1,6 @@
-package com.joel.pedidos.dto;
+package com.joel.pedidos.domain.dto;
 
+import com.joel.pedidos.domain.enums.Status;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -9,9 +10,7 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class ItemDoPedidoDTO {
+public class StatusDTO {
 
-    private Long id;
-    private Integer quantidade;
-    private String descricaoo;
+    private Status status;
 }

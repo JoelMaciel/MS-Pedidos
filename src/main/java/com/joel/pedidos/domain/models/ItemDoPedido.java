@@ -1,16 +1,16 @@
-package com.joel.pedidos.model;
+package com.joel.pedidos.domain.models;
 
 import com.sun.istack.NotNull;
 import lombok.AllArgsConstructor;
-import lombok.Getter;
+import lombok.Builder;
+import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.Setter;
 
 import javax.persistence.*;
 import javax.validation.constraints.Positive;
 
-@Getter
-@Setter
+@Data
+@Builder
 @AllArgsConstructor
 @NoArgsConstructor
 @Entity
@@ -24,8 +24,12 @@ public class ItemDoPedido {
     @NotNull
     @Positive
     private Integer quantidade;
+
+    @NotNull
     private String descricao;
 
     @ManyToOne(optional = false)
     private Pedido pedido;
+
+
 }
