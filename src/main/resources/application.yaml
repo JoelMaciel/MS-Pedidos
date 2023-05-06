@@ -1,7 +1,27 @@
+server:
+  port: 0
 
 spring:
+  application:
+    name: ms-pedidos
   datasource:
-    url: jdbc:mysql://localhost:3306/pedidos?createDatabaseIfNotExist=true
+    url: jdbc:mysql://localhost/pedidos?createDatabaseIfNotExist=true&serverTimeZone=UTC
     username: root
     password:
-    driver-class-name: com.mysql.cj.jdbc.Driver
+  flyway:
+    locations: classpath:db/migration
+  jpa:
+    hibernate:
+      ddl-auto: none
+      properties: org.hibernate.dialect.MySQL8Dialect
+      jdbc:
+        lob.non-contextual-creation: true
+    properties:
+      hibernate:
+        show_sql: true
+
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka
