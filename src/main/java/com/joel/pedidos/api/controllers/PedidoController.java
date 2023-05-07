@@ -5,6 +5,7 @@ import com.joel.pedidos.domain.dto.StatusDTO;
 import com.joel.pedidos.domain.services.PedidoService;
 import com.sun.istack.NotNull;
 import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.util.UriComponentsBuilder;
@@ -47,5 +48,10 @@ public class PedidoController {
     @ResponseStatus(HttpStatus.NO_CONTENT)
     public void aprovarPagamento(@PathVariable @NotNull Long id) {
         pedidoService.aprovarPagamentoPedido(id);
+    }
+
+    @GetMapping("/porta")
+    public String retornaPorta(@Value("${local.server.port}") String porta) {
+        return String.format("Requisição respondida pela instância executando na porta %s", porta);
     }
 }
