@@ -1,7 +1,7 @@
 package com.joel.pedidos.domain.services;
 
-import com.joel.pedidos.domain.dto.PedidoDTO;
-import com.joel.pedidos.domain.dto.StatusDTO;
+import com.joel.pedidos.api.dtos.PedidoDTO;
+import com.joel.pedidos.api.dtos.StatusDTO;
 import com.joel.pedidos.domain.enums.Status;
 import com.joel.pedidos.domain.exceptions.PedidoNaoEncontradoException;
 import com.joel.pedidos.domain.models.Pedido;
