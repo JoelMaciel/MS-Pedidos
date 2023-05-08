@@ -1,7 +1,7 @@
 package com.joel.pedidos.api.controllers;
 
-import com.joel.pedidos.domain.dto.PedidoDTO;
-import com.joel.pedidos.domain.dto.StatusDTO;
+import com.joel.pedidos.api.dtos.PedidoDTO;
+import com.joel.pedidos.api.dtos.StatusDTO;
 import com.joel.pedidos.domain.services.PedidoService;
 import com.sun.istack.NotNull;
 import lombok.RequiredArgsConstructor;

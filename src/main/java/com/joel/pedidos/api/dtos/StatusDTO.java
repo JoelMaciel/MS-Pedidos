@@ -1,4 +1,4 @@
-package com.joel.pedidos.domain.dto;
+package com.joel.pedidos.api.dtos;
 
 import com.joel.pedidos.domain.enums.Status;
 import lombok.AllArgsConstructor;
